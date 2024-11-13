@@ -5,6 +5,8 @@ let tax = document.querySelector('#tax')
 let shippingPrice = document.querySelector('#shipping')
 let btnElem = document.querySelector('button')
 let finalPrice = document.querySelector('#finalPrice')
+const discountTotal = document.querySelector('.discount_total')
+const taxtTotal = document.querySelector('.tax_total')
 
 let totalPrice;
 
@@ -27,6 +29,10 @@ function priceCalculation() {
     totalPrice += Number(shippingPriceValue)
 
     finalPrice.innerHTML = totalPrice
+
+    discountTotal.innerHTML = ' مقدار تخفیف کسر شده : ' + discountCalculation + '  هزار تومان میباشد';
+    taxtTotal.innerHTML = '  مقدار مالیات اضافه شده : ' + taxCalculation + '  هزار تومان میباشد';
+
 }
 
 
